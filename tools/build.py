@@ -125,7 +125,10 @@ def shell(page, *, title, description, body_class=""):
 <meta name="theme-color" content="#0a0f1c">
 <link rel="icon" href="{base}assets/img/urc-logo.png" type="image/png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap">
 <link rel="stylesheet" href="{base}assets/css/style.css">
 </head>
 <body class="{body_class}">
@@ -163,19 +166,19 @@ def shell(page, *, title, description, body_class=""):
 '''
 
 
-def hero(title, pills=None, extra=""):
+def hero(title, pills=None, extra="", photo=None):
     pill_html = ""
     if pills:
         pill_html = '<div class="pills" data-reveal style="--d:240ms">' + "".join(
             f'<a class="pill" href="#{esc(k)}"><span class="n">{i + 1:02d}</span>{esc(l)}</a>' for i, (k, l) in enumerate(pills)
         ) + "</div>"
+    photo_html = f'<div class="hero-photo" aria-hidden="true"><img src="{photo}" alt="" width="1920" height="1280" fetchpriority="high"></div>' if photo else '<div class="hero-glow a"></div><div class="hero-glow b"></div>'
     return f'''
-        <div class="hero-glow a"></div><div class="hero-glow b"></div>
+        {photo_html}
         <p class="eyebrow" data-reveal>URC · {esc(title)}</p>
         <h1 data-reveal style="--d:80ms">{esc(title)}<span class="dot">.</span></h1>
         <p class="hero-sub" data-reveal style="--d:160ms">{esc(SITE["org"])}</p>
-{pill_html}{extra}
-        <div class="scroll-cue" aria-hidden="true"><span class="line"></span>Scroll</div>'''
+{pill_html}{extra}'''
 
 
 def head(eyebrow, h2=None, sub=None):
@@ -208,7 +211,7 @@ def build_about():
     base = "../"
     pg = Page(base, "About us")
     it, g = d["intro"], d["greetings"]
-    pg.add("hero", "About us", hero(d["title"], [("introduction", d["tabs"][0]), ("greetings", d["tabs"][1])]), cls="hero")
+    pg.add("hero", "About us", hero(d["title"], [("introduction", d["tabs"][0]), ("greetings", d["tabs"][1])], photo=base + "assets/img/hero-about.jpg"), cls="hero has-photo")
     paras = "".join(f"<p>{esc(p)}</p>" for p in it["paras"])
     pg.add("introduction", d["tabs"][0], f'''
         {head(d["tabs"][0], it["heading"])}
@@ -254,7 +257,7 @@ def build_curriculum():
     d = load("curriculum")
     base = "../"
     pg = Page(base, "Curriculum")
-    pg.add("hero", "Curriculum", hero(d["title"], [("sessions", d["tabs"][0]), ("external", d["tabs"][1]), ("networking", d["tabs"][2])]), cls="hero")
+    pg.add("hero", "Curriculum", hero(d["title"], [("sessions", d["tabs"][0]), ("external", d["tabs"][1]), ("networking", d["tabs"][2])], photo=base + "assets/img/hero-curriculum.jpg"), cls="hero has-photo")
     total = len(d["sessions"])
     for i, s in enumerate(d["sessions"]):
         pg.add("sessions" if i == 0 else f"session-{s['key']}", s["title"], f'''
@@ -299,7 +302,7 @@ def build_research():
     base = "../"
     pg = Page(base, "Research")
     keys = ["market", "issue", "reits"]
-    pg.add("hero", "Research", hero(d["title"], list(zip(keys, d["tabs"]))), cls="hero")
+    pg.add("hero", "Research", hero(d["title"], list(zip(keys, d["tabs"])), photo=base + "assets/img/hero-research.jpg"), cls="hero has-photo")
     for k, g, label in zip(keys, d["groups"], d["tabs"]):
         tiles = []
         for j, it in enumerate(g["items"]):
@@ -320,7 +323,7 @@ def build_network():
     d = load("network")
     base = "../"
     pg = Page(base, "Network")
-    pg.add("hero", "Network", hero(d["title"], [("advisors", d["tabs"][0]), ("members", d["tabs"][1]), ("network", d["tabs"][2])]), cls="hero")
+    pg.add("hero", "Network", hero(d["title"], [("advisors", d["tabs"][0]), ("members", d["tabs"][1]), ("network", d["tabs"][2])], photo=base + "assets/img/hero-network.jpg"), cls="hero has-photo")
     advisors = "\n".join(
         f'''<article class="card advisor" data-reveal style="--d:{i * 120}ms">
             <div class="photo portrait">{img(a["photo"], base, a["name"], 453, 566)}</div>
@@ -377,7 +380,7 @@ def build_join():
     d = load("join")
     base = "../"
     pg = Page(base, "Join us")
-    pg.add("hero", "Join us", hero(d["title"], [("recruitment", d["tabs"][0]), ("faq", d["tabs"][1])]), cls="hero")
+    pg.add("hero", "Join us", hero(d["title"], [("recruitment", d["tabs"][0]), ("faq", d["tabs"][1])], photo=base + "assets/img/hero-join.jpg"), cls="hero has-photo")
     blocks = {}
     for i, b in enumerate(d["recruit"]):
         h = b["heading"]

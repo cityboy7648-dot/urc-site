@@ -152,6 +152,7 @@
   /* ── home hero photo parallax ────────────────────────────── */
   (function parallax() {
     const img = document.querySelector(".hero-photo img");
+    if (img && !body.classList.contains("scroll-natural")) return;
     if (!img || reduced) return;
     let t = false;
     const upd = () => { const y = Math.min(window.scrollY, window.innerHeight); img.style.transform = `translateY(${y * 0.18}px) scale(1.06)`; t = false; };
