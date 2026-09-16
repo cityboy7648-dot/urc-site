@@ -220,8 +220,8 @@ main { position: relative; z-index: 10; }
 @media (min-width: 640px) { .ext-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
 @media (min-width: 1024px) { .ext-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .ext-card { overflow: hidden; }
-.ext-logo { display: grid; place-items: center; height: clamp(140px, 13vw, 180px); padding: 20px 28px; background: #fff; }
-.ext-logo img { width: 100%; height: 100%; object-fit: contain; }
+.ext-logo { display: flex; align-items: center; justify-content: center; height: clamp(140px, 13vw, 180px); padding: 20px 28px; overflow: hidden; background: #fff; }
+.ext-logo img { width: 100%; height: 100%; max-height: 100%; object-fit: contain; }
 .ext-card h3 { display: flex; align-items: baseline; gap: 12px; padding: 15px 20px 17px; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--paper); }
 .duo { display: grid; gap: 16px; margin-top: 30px; }
 @media (min-width: 640px) { .duo { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
