@@ -1,0 +1,61 @@
+{
+  "title": "Research",
+  "tabs": [
+    "Market Report",
+    "Issue Report",
+    "REITs Report"
+  ],
+  "groups": [
+    {
+      "heading": "Market Report",
+      "items": [
+        {
+          "href": null
+        },
+        {
+          "href": "https://urcyonsei.com/wp-content/uploads/2025/06/test.pdf"
+        },
+        {
+          "href": "https://urcyonsei.com/wp-content/uploads/2025/06/test.pdf"
+        },
+        {
+          "href": "https://urcyonsei.com/wp-content/uploads/2025/06/test.pdf"
+        }
+      ]
+    },
+    {
+      "heading": "Issue Report",
+      "items": [
+        {
+          "href": null
+        },
+        {
+          "href": null
+        },
+        {
+          "href": null
+        },
+        {
+          "href": null
+        }
+      ]
+    },
+    {
+      "heading": "REITs Report",
+      "items": [
+        {
+          "href": "https://urcyonsei.com/wp-content/uploads/2025/07/URC_2기_리츠매입보고서_2차-완성본.pdf"
+        },
+        {
+          "href": null
+        },
+        {
+          "href": null
+        },
+        {
+          "href": null
+        }
+      ]
+    }
+  ]
+}

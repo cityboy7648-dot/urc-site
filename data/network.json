@@ -1,41 +1,4 @@
 {
-  "site": {
-    "title": "Network – URC | 연세대학교 도시공학과 부동산학회",
-    "org": "URC | 연세대학교 도시공학과 부동산학회",
-    "home": "https://urcyonsei.com/"
-  },
-  "nav": [
-    {
-      "label": "Home",
-      "href": "https://urcyonsei.com/"
-    },
-    {
-      "label": "About us",
-      "href": "https://urcyonsei.com/about-us/"
-    },
-    {
-      "label": "Curriculum",
-      "href": "https://urcyonsei.com/curriculum/"
-    },
-    {
-      "label": "Research",
-      "href": "https://urcyonsei.com/research/"
-    },
-    {
-      "label": "Network",
-      "href": "https://urcyonsei.com/network/",
-      "current": true
-    },
-    {
-      "label": "Join us",
-      "href": "https://urcyonsei.com/join-us/"
-    }
-  ],
-  "hero": {
-    "title": "Network",
-    "banner": "assets/img/yonsei-urban.jpg",
-    "banner_alt": "연세대학교 도시공학과"
-  },
   "tabs": [
     "Advisors",
     "Members",
@@ -535,32 +498,5 @@
     "text": "도시공학과를 졸업하신 선배님들께서는 부동산 및 금융 업계의 다양한 Player 역할을 수행하며, 동시에 URC에 많은 관심을 갖고 도움을 주고 계십니다. URC 회원들은 선배님들의 경험과 조언을 바탕으로 커리큘럼을 수행하며 실력과 인사이트를 키울 수 있습니다. URC의 네트워크 속에서 여러분들의 커리어를 쌓고 목표를 실현해 나가시길 바랍니다.",
     "photo": "assets/img/network-newyear.jpg"
   },
-  "footer": {
-    "org": "연세대학교 도시공학과 부동산학회 URC",
-    "address": "서울특별시 서대문구 연세로50 연세대학교",
-    "copyright": "Copyright©2024 URC All Rights Reserved",
-    "contact_title": "Contact Us",
-    "contacts": [
-      {
-        "role": "회장",
-        "name": "김준오",
-        "value": "010-5368-0947"
-      },
-      {
-        "role": "부회장",
-        "name": "박종수",
-        "value": "010-4214-3778"
-      },
-      {
-        "role": "부회장",
-        "name": "최석환",
-        "value": "010-2765-9885"
-      },
-      {
-        "role": "E-Mail",
-        "name": null,
-        "value": "urc202309@gmail.com"
-      }
-    ]
-  }
+  "title": "Network"
 }

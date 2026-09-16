@@ -1,31 +1,23 @@
-# URC Network 페이지 — 디자인 스펙
+# URC 사이트 — 디자인 스펙 (2026-09-17, 3차 개정)
 
 ## 목표
-urcyonsei.com/network 의 내용을 **한 글자도 더하거나 빼지 않고**, kaic-cau.com/curriculum 의 디자인 언어(다크 테마, 모노 아이브로우, 스크롤 리빌, 고정 배경 셰이더, 숨는 네비게이션)로 다시 구성한다. 다만 그대로 베끼지 않고 URC 브랜드에 맞게 변주한다.
+urcyonsei.com 의 여섯 페이지(Home / About us / Curriculum / Research / Network / Join us) 내용을 **한 글자도 더하거나 빼지 않고** 새 디자인으로 재구성한다.
 
-## 내용 (URC 기준, 변경 금지)
-- 헤더 네비: Home / About us / Curriculum / Research / Network(현재) / Join us → urcyonsei.com 절대 링크
-- 상단 배너 이미지: 연세대학교 도시공학과 로고 (logo4.jpg)
-- 제목: Network
-- 탭 1 **Advisors**: Mentor(강승범 교수님, 3줄), Admin(도승우 선배님, 2줄)
-- 탭 2 **Members**: 서브탭 Founders / 1st / 2nd / 3rd / 4th / 5th / 6th, 각 멤버 카드(사진, 이름/직책, 학과 학번, 경력 회사 목록)
-- 탭 3 **URC Network**: 안내 문단 1개 + 신년회 사진
-- 푸터: 학회명, 주소, Copyright, Contact Us(회장/부회장/부회장/E-Mail)
+## 디자인 원칙 (사용자 지시 반영)
+1. 배경 WebGL 영상 없음. 정적 다크 그라데이션 + 옅은 그리드.
+2. 페이지는 100vh 섹션의 연속. 휠 한 번에 한 섹션 이동(데스크톱), 모바일은 scroll-snap proximity.
+3. 모든 페이지 첫 섹션은 히어로. 배경은 어두운 네이비 그라데이션 + 느리게 움직이는 글로우 2개.
+4. 톤 다운: 네온 시안/바이올렛 대신 네이비(#0a0f1c) · 슬레이트 텍스트 · 소프트 블루(#7ea6e4) 한 가지 강조색. 참고 사이트 YRP(yrp.co.kr)의 차분한 기업형 톤을 따르되 서체는 YRP(Inter/Playfair)와 다르게 **Pretendard 단일**.
+5. 마지막 섹션은 Contact(원본 푸터 내용).
+6. 히어로에 URC 원본 탭 이름(예: Advisors / Members / URC Network)을 섹션 바로가기 알약으로 배치, 오른쪽 점 네비게이션으로도 이동.
 
-## 디자인 (KAIC 언어 + URC 변주)
-| 항목 | KAIC | URC 변주 |
-|---|---|---|
-| 배경색 | #04060b | #05070d (약간 더 차가운 네이비) |
-| 강조색 | 하늘색 #7fb4ff | URC 로고의 시안 #62d3f7 + 바이올렛 #8b6cf0 그라데이션 |
-| 고정 배경 | WebGL 은하·우주선 셰이더 | WebGL 도시 야경 셰이더 (원근 그리드 + 빛 입자 + 시안/바이올렛 안개), 스크롤 진행에 따라 카메라 전진 |
-| 폰트 | Pretendard + IBM Plex Mono + Space Grotesk | Pretendard + IBM Plex Mono |
-| 리빌 | opacity/translateY(24px) .75s | 동일 계열, 카드 스태거 |
-| 스텝 진행바 | 학기 3단계 | Members 기수 스트립(Founders→6th)에 진행바 채움 애니메이션, 클릭 시 기수 전환 |
-| 네비 | 스크롤 다운 시 숨김 | 동일 + 탭바는 sticky |
-| 카드 | 둥근 테두리 카드, hover 글로우 | 동일, 사진 카드 hover 시 살짝 떠오름 |
+## 내용 매핑
+- Home: "Urban Real-estate Club", "Chasing the Metropolitan Utopia" (원본 히어로 문구) + 페이지 디렉토리
+- About us: Introduction(문단 3 + 아이콘 카드 3 + People/Professional) / Greetings(학회장 인사)
+- Curriculum: Senior·Alumni·Study·Project Session(각 섹션, 다이어그램+사진) / External Activities(로고 6) / Networking
+- Research: Market·Issue·REITs Report 각 4칸 (원본이 placeholder라 링크 있는 칸만 PDF 태그)
+- Network: Advisors / Members(Founders~6th 기수 스트립) / URC Network
+- Join us: 지원자격·지원일정 / 지원방법·지원문의 / FAQ(아코디언)
 
 ## 구조
-- `index.html` (정적, 빌드 없음), `assets/css/style.css`, `assets/js/main.js`, `assets/img/*`
-- 스크롤: Lenis(CDN) 부드러운 스크롤, reduced-motion 시 비활성
-- 탭: 해시(#advisors/#members/#network)로 딥링크, 키보드 접근 가능
-- 배포: GitHub Pages(상대 경로 사용)
+- 정적 HTML, `tools/build.py` 가 `data/*.json` 에서 생성. GitHub Pages 상대 경로.

@@ -1,0 +1,59 @@
+{
+  "org": "URC | 연세대학교 도시공학과 부동산학회",
+  "org_short": "연세대학교 도시공학과 부동산학회",
+  "home": "https://urcyonsei.com/",
+  "nav": [
+    {
+      "label": "Home",
+      "path": ""
+    },
+    {
+      "label": "About us",
+      "path": "about-us/"
+    },
+    {
+      "label": "Curriculum",
+      "path": "curriculum/"
+    },
+    {
+      "label": "Research",
+      "path": "research/"
+    },
+    {
+      "label": "Network",
+      "path": "network/"
+    },
+    {
+      "label": "Join us",
+      "path": "join-us/"
+    }
+  ],
+  "footer": {
+    "org": "연세대학교 도시공학과 부동산학회 URC",
+    "address": "서울특별시 서대문구 연세로50 연세대학교",
+    "copyright": "Copyright©2024 URC All Rights Reserved",
+    "contact_title": "Contact Us",
+    "contacts": [
+      {
+        "role": "회장",
+        "name": "김준오",
+        "value": "010-5368-0947"
+      },
+      {
+        "role": "부회장",
+        "name": "박종수",
+        "value": "010-4214-3778"
+      },
+      {
+        "role": "부회장",
+        "name": "최석환",
+        "value": "010-2765-9885"
+      },
+      {
+        "role": "E-Mail",
+        "name": null,
+        "value": "urc202309@gmail.com"
+      }
+    ]
+  }
+}
