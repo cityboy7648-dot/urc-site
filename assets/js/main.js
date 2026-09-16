@@ -12,7 +12,7 @@
     let last = window.scrollY, ticking = false;
     const update = () => {
       const y = window.scrollY;
-      body.classList.toggle("is-scrolled", y > 24);
+      body.classList.toggle("is-scrolled", y > window.innerHeight - 120);
       if (Math.abs(y - last) > 6) {
         body.classList.toggle("nav-hidden", y > 120 && y > last && !body.classList.contains("menu-open"));
         last = y;
