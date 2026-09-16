@@ -123,7 +123,7 @@ def shell(page, *, title, description, body_class=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
-<meta name="theme-color" content="#0a0f1c">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="{base}assets/img/urc-logo.png" type="image/png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
