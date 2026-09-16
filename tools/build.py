@@ -75,8 +75,9 @@ class Page:
         out = []
         for i, (id_, label, inner, cls) in enumerate(self.secs):
             idx = "" if i == 0 else f'<div class="sec-index"><b>{i:02d}</b> / {n - 1:02d}</div>'
+            bg = "" if i == 0 else f"bg-{(i - 1) % 4 + 1}"
             out.append(f'''
-    <section class="sec {cls}" id="{esc(id_)}" data-label="{esc(label)}">
+    <section class="sec {cls} {bg}" id="{esc(id_)}" data-label="{esc(label)}">
 {idx}
       <div class="sec-inner">
 {inner}
@@ -356,7 +357,6 @@ def build_network():
 
     gpanels = "\n".join(
         f'''<div class="gen-panel" id="genpanel-{esc(g["slug"])}" role="tabpanel" aria-labelledby="gen-{esc(g["slug"])}" data-gen="{esc(g["slug"])}"{'' if i == 0 else ' hidden'}>
-            <div class="gen-title"><span class="n">{i:02d}</span><h3>{esc(g["gen"])}</h3></div>
             <ul class="members">{"".join(card(m, j) for j, m in enumerate(g["members"]))}</ul>
           </div>''' for i, g in enumerate(d["members"])
     )
@@ -365,7 +365,7 @@ def build_network():
         <div class="gens"><div class="gen-strip" role="tablist" aria-label="기수">
 {strip}
         </div></div>
-{gpanels}''', cls="sec-tall")
+{gpanels}''', cls="sec-members")
     n = d["network"]
     pg.add("network", d["tabs"][2], f'''
         {head(d["tabs"][2])}
