@@ -1,0 +1,566 @@
+{
+  "site": {
+    "title": "Network – URC | 연세대학교 도시공학과 부동산학회",
+    "org": "URC | 연세대학교 도시공학과 부동산학회",
+    "home": "https://urcyonsei.com/"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "https://urcyonsei.com/"
+    },
+    {
+      "label": "About us",
+      "href": "https://urcyonsei.com/about-us/"
+    },
+    {
+      "label": "Curriculum",
+      "href": "https://urcyonsei.com/curriculum/"
+    },
+    {
+      "label": "Research",
+      "href": "https://urcyonsei.com/research/"
+    },
+    {
+      "label": "Network",
+      "href": "https://urcyonsei.com/network/",
+      "current": true
+    },
+    {
+      "label": "Join us",
+      "href": "https://urcyonsei.com/join-us/"
+    }
+  ],
+  "hero": {
+    "title": "Network",
+    "banner": "assets/img/yonsei-urban.jpg",
+    "banner_alt": "연세대학교 도시공학과"
+  },
+  "tabs": [
+    "Advisors",
+    "Members",
+    "URC Network"
+  ],
+  "advisors": [
+    {
+      "group": "Mentor",
+      "name": "강승범 교수님",
+      "photo": "assets/img/advisor-mentor.jpg",
+      "lines": [
+        "現 연세대학교 도시공학과 교수",
+        "前 University of Florida 도시 및 지역계획학 교수",
+        "연세대학교 도시공학과 04학번"
+      ]
+    },
+    {
+      "group": "Admin",
+      "name": "도승우 선배님",
+      "photo": "assets/img/advisor-admin.jpg",
+      "lines": [
+        "現 신영증권",
+        "연세대학교 도시공학과 16학번"
+      ]
+    }
+  ],
+  "members": [
+    {
+      "gen": "Founders",
+      "slug": "founders",
+      "members": [
+        {
+          "name": "신정범",
+          "role": "회장",
+          "dept": "도시공학과 18",
+          "careers": [
+            "한국투자증권",
+            "신한자산운용",
+            "삼일Pwc"
+          ],
+          "photo": "assets/img/member-founders-01.jpg"
+        },
+        {
+          "name": "송재홍",
+          "role": "부회장",
+          "dept": "도시공학과 18",
+          "careers": [
+            "삼성증권",
+            "Greensledge",
+            "KB증권",
+            "JB자산운용"
+          ],
+          "photo": "assets/img/member-founders-02.jpg"
+        },
+        {
+          "name": "김재헌",
+          "role": null,
+          "dept": "도시공학과 18",
+          "careers": [
+            "안다자산운용",
+            "무궁화신탁"
+          ],
+          "photo": "assets/img/member-founders-03.jpg"
+        },
+        {
+          "name": "김재준",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "타이거대체투자운용",
+            "Cushman & Wakefield"
+          ],
+          "photo": "assets/img/member-founders-04.jpg"
+        },
+        {
+          "name": "윤현수",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "JLP International",
+            "L5 AMC",
+            "어반플레이"
+          ],
+          "photo": "assets/img/member-founders-05.jpg"
+        },
+        {
+          "name": "최윤혁",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "LX인터내셔널",
+            "베스타스자산운용",
+            "Brite Energy Partners"
+          ],
+          "photo": "assets/img/member-founders-06.jpg"
+        }
+      ]
+    },
+    {
+      "gen": "1st",
+      "slug": "1st",
+      "members": [
+        {
+          "name": "홍정우",
+          "role": "회장",
+          "dept": "도시공학과 18",
+          "careers": [
+            "어반웰스",
+            "딜로이트안진",
+            "RSQUARE"
+          ],
+          "photo": "assets/img/member-1st-01.jpg"
+        },
+        {
+          "name": "김동건",
+          "role": "부회장",
+          "dept": "도시공학과 21",
+          "careers": [
+            "한국투자증권",
+            "홈즈컴퍼니"
+          ],
+          "photo": "assets/img/member-1st-02.jpg"
+        },
+        {
+          "name": "김한빈",
+          "role": "부회장",
+          "dept": "도시공학과 23",
+          "careers": [],
+          "photo": "assets/img/member-1st-03.jpg"
+        },
+        {
+          "name": "양효은",
+          "role": "총무",
+          "dept": "도시공학과 20",
+          "careers": [
+            "안다자산운용",
+            "홈즈컴퍼니",
+            "딜로이트안진"
+          ],
+          "photo": "assets/img/member-1st-04.jpg"
+        },
+        {
+          "name": "윤찬진",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "Brite Energy Partners"
+          ],
+          "photo": "assets/img/member-1st-05.jpg"
+        },
+        {
+          "name": "이나연",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "삼성생명",
+            "신용보증기금"
+          ],
+          "photo": "assets/img/member-1st-06.jpg"
+        },
+        {
+          "name": "김태형",
+          "role": null,
+          "dept": "도시공학과 23",
+          "careers": [
+            "Nexawave"
+          ],
+          "photo": "assets/img/member-1st-07.jpg"
+        },
+        {
+          "name": "유지민",
+          "role": null,
+          "dept": "도시공학과 23",
+          "careers": [],
+          "photo": "assets/img/member-1st-08.jpg"
+        }
+      ]
+    },
+    {
+      "gen": "2nd",
+      "slug": "2nd",
+      "members": [
+        {
+          "name": "김상우",
+          "role": "회장",
+          "dept": "도시공학과 19",
+          "careers": [
+            "칸서스자산운용",
+            "이지스자산운용",
+            "Brite Energy Partners"
+          ],
+          "photo": "assets/img/member-2nd-01.jpg"
+        },
+        {
+          "name": "박훈철",
+          "role": "부회장",
+          "dept": "도시공학과 19",
+          "careers": [
+            "AIP자산운용",
+            "어반플레이"
+          ],
+          "photo": "assets/img/member-2nd-02.jpg"
+        },
+        {
+          "name": "오재민",
+          "role": "부회장",
+          "dept": "도시공학과 19",
+          "careers": [
+            "UAMCO",
+            "ESR켄달스퀘어자산운용",
+            "CBRE IM"
+          ],
+          "photo": "assets/img/member-2nd-03.jpg"
+        },
+        {
+          "name": "복진우",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "Colliers"
+          ],
+          "photo": "assets/img/member-2nd-04.jpg"
+        },
+        {
+          "name": "우준호",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "IBK기업은행"
+          ],
+          "photo": "assets/img/member-2nd-05.jpg"
+        },
+        {
+          "name": "김재상",
+          "role": null,
+          "dept": "도시공학과 22",
+          "careers": [],
+          "photo": "assets/img/member-2nd-06.jpg"
+        },
+        {
+          "name": "서호연",
+          "role": null,
+          "dept": "도시공학과 22",
+          "careers": [],
+          "photo": "assets/img/member-2nd-07.jpg"
+        }
+      ]
+    },
+    {
+      "gen": "3rd",
+      "slug": "3rd",
+      "members": [
+        {
+          "name": "한현준",
+          "role": "회장",
+          "dept": "도시공학과 20",
+          "careers": [
+            "CapitaLand",
+            "Cushman & Wakefield",
+            "홈즈컴퍼니"
+          ],
+          "photo": "assets/img/member-3rd-01.jpg"
+        },
+        {
+          "name": "김소은",
+          "role": "부회장",
+          "dept": "도시공학과 22",
+          "careers": [
+            "코람코자산운용",
+            "ESR켄달스퀘어자산운용",
+            "어반플레이"
+          ],
+          "photo": "assets/img/member-3rd-02.jpg"
+        },
+        {
+          "name": "고승연",
+          "role": "부회장",
+          "dept": "도시공학과 24",
+          "careers": [],
+          "photo": "assets/img/member-3rd-03.jpg"
+        },
+        {
+          "name": "권희선",
+          "role": "총무",
+          "dept": "도시공학과 23",
+          "careers": [
+            "Brite Energy Partners"
+          ],
+          "photo": "assets/img/member-3rd-04.jpg"
+        },
+        {
+          "name": "안성수",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "삼천리자산운용",
+            "삼덕회계법인"
+          ],
+          "photo": "assets/img/member-3rd-05.jpg"
+        },
+        {
+          "name": "안재범",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "이지스자산운용",
+            "젠스타메이트"
+          ],
+          "photo": "assets/img/member-3rd-06.jpg"
+        },
+        {
+          "name": "박정필",
+          "role": null,
+          "dept": "도시공학과 20",
+          "careers": [
+            "선도소프트"
+          ],
+          "photo": "assets/img/member-3rd-07.jpg"
+        },
+        {
+          "name": "이수성",
+          "role": null,
+          "dept": "행정학과 20",
+          "careers": [
+            "피데스개발",
+            "마스턴프라퍼티",
+            "미래건축"
+          ],
+          "photo": "assets/img/member-3rd-08.jpg"
+        }
+      ]
+    },
+    {
+      "gen": "4th",
+      "slug": "4th",
+      "members": [
+        {
+          "name": "김정섭",
+          "role": "회장",
+          "dept": "도시공학과 19",
+          "careers": [
+            "한투리얼에셋운용"
+          ],
+          "photo": "assets/img/member-4th-01.jpg"
+        },
+        {
+          "name": "최진욱",
+          "role": "부회장",
+          "dept": "도시공학과 22",
+          "careers": [],
+          "photo": "assets/img/member-4th-02.jpg"
+        },
+        {
+          "name": "여민서",
+          "role": "부회장",
+          "dept": "도시공학과 23",
+          "careers": [
+            "BNK투자증권",
+            "한국토지주택공사",
+            "김포문화재단"
+          ],
+          "photo": "assets/img/member-4th-03.jpg"
+        },
+        {
+          "name": "이주형",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [],
+          "photo": "assets/img/member-4th-04.jpg"
+        },
+        {
+          "name": "이형찬",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [
+            "캡스톤자산운용",
+            "알세온코리아자산운용"
+          ],
+          "photo": "assets/img/member-4th-05.jpg"
+        },
+        {
+          "name": "황현종",
+          "role": null,
+          "dept": "도시공학과 21",
+          "careers": [],
+          "photo": "assets/img/member-4th-06.jpg"
+        },
+        {
+          "name": "박한나",
+          "role": null,
+          "dept": "도시공학과 24",
+          "careers": [],
+          "photo": "assets/img/member-4th-07.jpg"
+        },
+        {
+          "name": "정길훈",
+          "role": null,
+          "dept": "도시공학과 24",
+          "careers": [],
+          "photo": "assets/img/member-4th-08.jpg"
+        }
+      ]
+    },
+    {
+      "gen": "5th",
+      "slug": "5th",
+      "members": [
+        {
+          "name": "김준오",
+          "role": "회장",
+          "dept": "도시공학과 22",
+          "careers": [],
+          "photo": "assets/img/member-5th-01.jpg"
+        },
+        {
+          "name": "박종수",
+          "role": "부회장",
+          "dept": "도시공학과 21",
+          "careers": [
+            "우리은행"
+          ],
+          "photo": "assets/img/member-5th-02.jpg"
+        },
+        {
+          "name": "최석환",
+          "role": "부회장",
+          "dept": "도시공학과 22",
+          "careers": [],
+          "photo": "assets/img/member-5th-03.jpg"
+        },
+        {
+          "name": "한승우",
+          "role": null,
+          "dept": "도시공학과 19",
+          "careers": [],
+          "photo": "assets/img/member-5th-04.jpg"
+        },
+        {
+          "name": "홍진표",
+          "role": null,
+          "dept": "경제학과 22",
+          "careers": [],
+          "photo": "assets/img/member-5th-05.jpg"
+        }
+      ]
+    },
+    {
+      "gen": "6th",
+      "slug": "6th",
+      "members": [
+        {
+          "name": "우희중",
+          "role": null,
+          "dept": "도시공학과 21",
+          "careers": [],
+          "photo": "assets/img/member-6th-01.jpg"
+        },
+        {
+          "name": "오세환",
+          "role": null,
+          "dept": "도시공학과 22",
+          "careers": [],
+          "photo": "assets/img/member-6th-02.jpg"
+        },
+        {
+          "name": "조하람",
+          "role": null,
+          "dept": "도시공학과 23",
+          "careers": [],
+          "photo": "assets/img/member-6th-03.jpg"
+        },
+        {
+          "name": "최은빈",
+          "role": null,
+          "dept": "도시공학과 23",
+          "careers": [],
+          "photo": "assets/img/member-6th-04.jpg"
+        },
+        {
+          "name": "전혜린",
+          "role": null,
+          "dept": "도시공학과 25",
+          "careers": [],
+          "photo": "assets/img/member-6th-05.jpg"
+        },
+        {
+          "name": "김시운",
+          "role": null,
+          "dept": "도시공학과 25",
+          "careers": [],
+          "photo": "assets/img/member-6th-06.jpg"
+        }
+      ]
+    }
+  ],
+  "network": {
+    "text": "도시공학과를 졸업하신 선배님들께서는 부동산 및 금융 업계의 다양한 Player 역할을 수행하며, 동시에 URC에 많은 관심을 갖고 도움을 주고 계십니다. URC 회원들은 선배님들의 경험과 조언을 바탕으로 커리큘럼을 수행하며 실력과 인사이트를 키울 수 있습니다. URC의 네트워크 속에서 여러분들의 커리어를 쌓고 목표를 실현해 나가시길 바랍니다.",
+    "photo": "assets/img/network-newyear.jpg"
+  },
+  "footer": {
+    "org": "연세대학교 도시공학과 부동산학회 URC",
+    "address": "서울특별시 서대문구 연세로50 연세대학교",
+    "copyright": "Copyright©2024 URC All Rights Reserved",
+    "contact_title": "Contact Us",
+    "contacts": [
+      {
+        "role": "회장",
+        "name": "김준오",
+        "value": "010-5368-0947"
+      },
+      {
+        "role": "부회장",
+        "name": "박종수",
+        "value": "010-4214-3778"
+      },
+      {
+        "role": "부회장",
+        "name": "최석환",
+        "value": "010-2765-9885"
+      },
+      {
+        "role": "E-Mail",
+        "name": null,
+        "value": "urc202309@gmail.com"
+      }
+    ]
+  }
+}
