@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="is-home">
+<body class="is-home scroll-natural">
   <div id="bg" aria-hidden="true"></div>
 
   <header class="nav">
@@ -43,11 +43,7 @@
     </nav>
   </div>
 
-  <nav class="dots" aria-label="섹션">
-<button type="button" aria-label="Home"><span>Home</span></button>
-<button type="button" aria-label="Menu"><span>Menu</span></button>
-<button type="button" aria-label="Contact"><span>Contact</span></button>
-  </nav>
+
 
   <main>
 
@@ -55,7 +51,7 @@
 
       <div class="sec-inner">
 
-        <div class="hero-glow a"></div><div class="hero-glow b"></div>
+        <div class="hero-photo" aria-hidden="true"><img src="assets/img/home-hero.jpg" alt="" width="2000" height="1230" fetchpriority="high"></div>
         <p class="eyebrow" data-reveal>URC | 연세대학교 도시공학과 부동산학회</p>
         <h1 data-reveal style="--d:90ms"><span class="only-desktop">Urban Real-estate Club</span><span class="only-mobile">Urban<br>Real-estate Club</span></h1>
         <p class="home-tagline" data-reveal style="--d:180ms">Chasing the Metropolitan Utopia</p>
@@ -63,68 +59,30 @@
           <a class="btn btn-primary" href="about-us/">About us</a>
           <a class="btn btn-ghost" href="join-us/">Join us</a>
         </div>
-        <div class="scroll-cue" aria-hidden="true"><span class="line"></span>Scroll</div>
       </div>
     </section>
+  </main>
 
-    <section class="sec " id="directory" data-label="Menu">
-<div class="sec-index"><b>01</b> / 02</div>
-      <div class="sec-inner">
-
-        <div class="sec-head"><p class="eyebrow" data-reveal>URC</p><h2 data-reveal style="--d:80ms">Urban Real-estate Club</h2><p class="sub" data-reveal style="--d:160ms">Chasing the Metropolitan Utopia</p></div>
-        <div class="dir-grid">
-<a class="card dir-card" href="about-us/" data-reveal style="--d:0ms">
-            <span class="n">01</span>
-            <span class="dir-label">About us</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
-<a class="card dir-card" href="curriculum/" data-reveal style="--d:70ms">
-            <span class="n">02</span>
-            <span class="dir-label">Curriculum</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
-<a class="card dir-card" href="research/" data-reveal style="--d:140ms">
-            <span class="n">03</span>
-            <span class="dir-label">Research</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
-<a class="card dir-card" href="network/" data-reveal style="--d:210ms">
-            <span class="n">04</span>
-            <span class="dir-label">Network</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
-<a class="card dir-card" href="join-us/" data-reveal style="--d:280ms">
-            <span class="n">05</span>
-            <span class="dir-label">Join us</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-grid">
+        <div>
+          <p class="foot-org">연세대학교 도시공학과 부동산학회 URC</p>
+          <p class="foot-meta">서울특별시 서대문구 연세로50 연세대학교<br>Copyright©2024 URC All Rights Reserved</p>
         </div>
-      </div>
-    </section>
-
-    <section class="sec sec-contact" id="contact" data-label="Contact">
-<div class="sec-index"><b>02</b> / 02</div>
-      <div class="sec-inner">
-
-        <div class="contact-grid">
-          <div>
-            <p class="eyebrow" data-reveal>Contact Us</p>
-            <h2 class="contact-org" data-reveal style="--d:80ms">연세대학교 도시공학과 부동산학회 URC</h2>
-            <p class="contact-meta" data-reveal style="--d:160ms">서울특별시 서대문구 연세로50 연세대학교<br>Copyright©2024 URC All Rights Reserved</p>
-          </div>
-          <div class="contact-list" data-reveal style="--d:240ms">
-            <dl>
+        <div class="foot-contact">
+          <p class="eyebrow-sm">Contact Us</p>
+          <dl>
 <dt>회장</dt><dd class="nm">김준오</dd><dd><a href="tel:01053680947">010-5368-0947</a></dd>
 <dt>부회장</dt><dd class="nm">박종수</dd><dd><a href="tel:01042143778">010-4214-3778</a></dd>
 <dt>부회장</dt><dd class="nm">최석환</dd><dd><a href="tel:01027659885">010-2765-9885</a></dd>
 <dt>E-Mail</dt><dd class="nm"></dd><dd><a href="mailto:urc202309@gmail.com">urc202309@gmail.com</a></dd>
-            </dl>
-          </div>
+          </dl>
         </div>
-        <div class="foot-line" data-reveal style="--d:320ms"><span>URC</span><nav class="foot-nav"><a href="./">Home</a> <a href="about-us/">About us</a> <a href="curriculum/">Curriculum</a> <a href="research/">Research</a> <a href="network/">Network</a> <a href="join-us/">Join us</a></nav></div>
       </div>
-    </section>
-  </main>
+      <div class="foot-line"><span>URC</span><nav class="foot-nav"><a href="./">Home</a> <a href="about-us/">About us</a> <a href="curriculum/">Curriculum</a> <a href="research/">Research</a> <a href="network/">Network</a> <a href="join-us/">Join us</a></nav></div>
+    </div>
+  </footer>
 
   <script src="assets/js/main.js" defer></script>
 </body>

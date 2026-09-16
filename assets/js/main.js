@@ -87,7 +87,7 @@
   };
 
   // wheel: one gesture = one section (mouse / trackpad)
-  if (secs.length && !coarse) {
+  if (secs.length > 1 && !coarse && !body.classList.contains("scroll-natural")) {
     window.addEventListener("wheel", (e) => {
       if (body.classList.contains("menu-open")) return;
       if (lock) { e.preventDefault(); return; }
@@ -148,6 +148,15 @@
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => { if (jumpTo(a.getAttribute("href").slice(1))) e.preventDefault(); });
   });
+
+  /* ── home hero photo parallax ────────────────────────────── */
+  (function parallax() {
+    const img = document.querySelector(".hero-photo img");
+    if (!img || reduced) return;
+    let t = false;
+    const upd = () => { const y = Math.min(window.scrollY, window.innerHeight); img.style.transform = `translateY(${y * 0.18}px) scale(1.06)`; t = false; };
+    window.addEventListener("scroll", () => { if (!t) { t = true; requestAnimationFrame(upd); } }, { passive: true });
+  })();
 
   /* ── members: generation strip ───────────────────────────── */
   const gens = Array.from(document.querySelectorAll(".gen[data-gen]"));

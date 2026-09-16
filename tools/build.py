@@ -88,25 +88,29 @@ class Page:
         return "\n".join(f'<button type="button" aria-label="{esc(l)}"><span>{esc(l)}</span></button>' for _, l, _, _ in self.secs)
 
 
-def contact_section(page):
+def footer_html(page):
     foot = SITE["footer"]
     links = " ".join(
         f'<a href="{esc(page.base + n["path"] if n["path"] else (page.base or "./"))}">{esc(n["label"])}</a>' for n in SITE["nav"]
     )
-    page.add("contact", "Contact", f'''
-        <div class="contact-grid">
-          <div>
-            <p class="eyebrow" data-reveal>{esc(foot["contact_title"])}</p>
-            <h2 class="contact-org" data-reveal style="--d:80ms">{esc(foot["org"])}</h2>
-            <p class="contact-meta" data-reveal style="--d:160ms">{esc(foot["address"])}<br>{esc(foot["copyright"])}</p>
-          </div>
-          <div class="contact-list" data-reveal style="--d:240ms">
-            <dl>
-{contacts()}
-            </dl>
-          </div>
+    return f'''
+  <footer class="foot">
+    <div class="foot-inner">
+      <div class="foot-grid">
+        <div>
+          <p class="foot-org">{esc(foot["org"])}</p>
+          <p class="foot-meta">{esc(foot["address"])}<br>{esc(foot["copyright"])}</p>
         </div>
-        <div class="foot-line" data-reveal style="--d:320ms"><span>URC</span><nav class="foot-nav">{links}</nav></div>''', cls="sec-contact")
+        <div class="foot-contact">
+          <p class="eyebrow-sm">{esc(foot["contact_title"])}</p>
+          <dl>
+{contacts()}
+          </dl>
+        </div>
+      </div>
+      <div class="foot-line"><span>URC</span><nav class="foot-nav">{links}</nav></div>
+    </div>
+  </footer>'''
 
 
 def shell(page, *, title, description, body_class=""):
@@ -146,13 +150,12 @@ def shell(page, *, title, description, body_class=""):
     </nav>
   </div>
 
-  <nav class="dots" aria-label="섹션">
-{page.dots()}
-  </nav>
+{('<nav class="dots" aria-label="섹션">' + chr(10) + page.dots() + chr(10) + '  </nav>') if len(page.secs) > 1 else ''}
 
   <main>
 {page.render()}
   </main>
+{footer_html(page)}
 
   <script src="{base}assets/js/main.js" defer></script>
 </body>
@@ -189,29 +192,15 @@ def build_home():
     h = d["hero"]
     pg = Page("", "Home")
     pg.add("hero", "Home", f'''
-        <div class="hero-glow a"></div><div class="hero-glow b"></div>
+        <div class="hero-photo" aria-hidden="true"><img src="{esc(h["photo"])}" alt="" width="2000" height="1230" fetchpriority="high"></div>
         <p class="eyebrow" data-reveal>{esc(SITE["org"])}</p>
         <h1 data-reveal style="--d:90ms"><span class="only-desktop">{esc(h["title"])}</span><span class="only-mobile">{esc(h["title_mobile"]).replace(chr(10), "<br>")}</span></h1>
         <p class="home-tagline" data-reveal style="--d:180ms">{esc(h["tagline"])}</p>
         <div class="btn-row" data-reveal style="--d:270ms">
           <a class="btn btn-primary" href="about-us/">About us</a>
           <a class="btn btn-ghost" href="join-us/">Join us</a>
-        </div>
-        <div class="scroll-cue" aria-hidden="true"><span class="line"></span>Scroll</div>''', cls="hero hero-home")
-    cards = "\n".join(
-        f'''<a class="card dir-card" href="{esc(n["path"])}" data-reveal style="--d:{i * 70}ms">
-            <span class="n">{i + 1:02d}</span>
-            <span class="dir-label">{esc(n["label"])}</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>''' for i, n in enumerate(SITE["nav"][1:])
-    )
-    pg.add("directory", "Menu", f'''
-        {head("URC", h["title"], h["tagline"])}
-        <div class="dir-grid">
-{cards}
-        </div>''')
-    contact_section(pg)
-    return shell(pg, title=f"URC | {SITE['org_short']}", description=f"{h['title']} — {h['tagline']}", body_class="is-home")
+        </div>''', cls="hero hero-home")
+    return shell(pg, title=f"URC | {SITE['org_short']}", description=f"{h['title']} — {h['tagline']}", body_class="is-home scroll-natural")
 
 
 def build_about():
@@ -223,7 +212,7 @@ def build_about():
     paras = "".join(f"<p>{esc(p)}</p>" for p in it["paras"])
     pg.add("introduction", d["tabs"][0], f'''
         {head(d["tabs"][0], it["heading"])}
-        <div class="lead-block narrow" data-reveal style="--d:160ms">{paras}</div>''')
+        <div class="lead-block narrow" data-reveal style="--d:160ms">{paras}</div>''', cls="sec-alt")
     pillars = "\n".join(
         f'''<div class="card pillar" data-reveal style="--d:{i * 90}ms">
             <div class="pillar-icon"><img src="{base}{esc(p["icon"])}" alt="" width="48" height="48"></div>
@@ -258,7 +247,6 @@ def build_about():
             <div class="lead-block letter">{gparas}</div>
           </div>
         </article>''')
-    contact_section(pg)
     return shell(pg, title=f"About us – URC | {SITE['org_short']}", description=it["paras"][0][:150])
 
 
@@ -303,7 +291,6 @@ def build_curriculum():
           <div class="photo frame" data-reveal style="--d:240ms">{img(n["images"][0], base, "", 1200, 903)}</div>
           <div class="photo frame" data-reveal style="--d:320ms">{img(n["images"][1], base, "", 1200, 900)}</div>
         </div>''')
-    contact_section(pg)
     return shell(pg, title=f"Curriculum – URC | {SITE['org_short']}", description=d["sessions"][0]["text"][:150])
 
 
@@ -326,7 +313,6 @@ def build_research():
         <div class="doc-grid">
 {chr(10).join(tiles)}
         </div>''')
-    contact_section(pg)
     return shell(pg, title=f"Research – URC | {SITE['org_short']}", description=" · ".join(d["tabs"]))
 
 
@@ -384,7 +370,6 @@ def build_network():
           <p class="net-text" data-reveal style="--d:120ms">{esc(n["text"])}</p>
           <div class="photo" data-reveal style="--d:220ms">{img(n["photo"], base, "", 1024, 673)}</div>
         </div>''')
-    contact_section(pg)
     return shell(pg, title=f"Network – URC | {SITE['org_short']}", description=n["text"][:150])
 
 
@@ -443,7 +428,6 @@ def build_join():
         <div class="faq-list">
 {faq}
         </div>''')
-    contact_section(pg)
     return shell(pg, title=f"Join us – URC | {SITE['org_short']}", description=" / ".join(d["recruit"][0]["items"])[:150])
 
 
